@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 5px theme('colors.cyan.400/30'),
+                  0 0 20px theme('colors.cyan.400/20');
+    }
+    50% {
+      box-shadow: 0 0 10px theme('colors.cyan.400/40'),
+                  0 0 30px theme('colors.cyan.400/30');
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out forwards;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+  
+  @layer base {
+    body {
+      @apply antialiased text-gray-100 bg-gray-900;
+      background-image: radial-gradient(circle at 50% 50%, theme('colors.cyan.900/20'), transparent 100%);
+    }
+  
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
