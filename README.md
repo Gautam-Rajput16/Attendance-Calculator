@@ -21,7 +21,7 @@ Attendance Calculator is a React-based web application that helps students calcu
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Gautam-Rajput16/Attendance    npm installCalculator.git
+   git clone https://github.com/Gautam-Rajput16/Attendance   
    cd attendance-calculator
    ```
 2. npm install
